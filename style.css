@@ -2,30 +2,56 @@
   box-sizing: border-box;
 }
 
-body {
-  font-size: 22px;
+.clock {
+  font-size: 150px;
   line-height: 1.5;
-  font-family: Helvetica, sans-serif;
+  font-family: 'Gloock', serif;
   color: #111;
   margin: 0;
-  padding: 20px 40px;
+  margin-top: -33vh;
 
   /* This will center anything on your page */
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
 }
 
-.clock {
-  display: flex;
-  gap: 20px;
-  padding: 20px 30px;
-  text-align: center;
-  border: 2px solid black;
-  border-radius: 10px;
+svg {
+	width: 101vw;
+	height: 101vh;
+  margin-top: -1vh;
+  margin-left: -1vw;
+  margin-right: -1vw;
+	padding: 0;
+	overflow: hidden;
 }
 
 .time {
   
+}
+
+@keyframes rotate {
+  100% {
+     transform: rotate(360deg)
+  }
+}
+
+.top-outer {
+  transform-origin: 73px 69px;
+  animation: rotate 30s linear infinite;
+}
+
+.top-inner {
+  transform-origin: 73px 69px;
+  animation: rotate 20s linear infinite;
+}
+
+.bottom-outer {
+  transform-origin: 134px 222px;
+  animation: rotate 30s linear infinite;
+}
+
+.bottom-inner {
+  transform-origin: 134px  222px;
+  animation: rotate 20s linear infinite;
 }
